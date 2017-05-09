@@ -202,8 +202,8 @@ class LastFM(callbacks.Plugin):
             except KeyError:
                 pass
 
-        s = '%s - %s %s %s%s. %s' % (ircutils.bold(track),
-            ircutils.bold(artist), album, time, ext_info, public_url)
+        s = '%s - %s' % (ircutils.bold(track),
+            ircutils.bold(artist))
         irc.reply(utils.str.normalizeWhitespace(s))
 
     @wrap(["something"])
